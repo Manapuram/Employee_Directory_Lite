@@ -1,0 +1,52 @@
+.employee-directory {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+
+  h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .add-form, .search-bar {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    justify-content: center;
+  }
+
+  input {
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    border: 1px solid #ccc;
+  }
+
+  button {
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+    border: none;
+    background: #6c63ff;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.2s;
+    &:hover {
+      background: #5548c8;
+    }
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    th, td {
+      padding: 0.75rem;
+      border-bottom: 1px solid #eee;
+      text-align: left;
+    }
+    th {
+      background: #f7f7f7;
+    }
+  }
+}

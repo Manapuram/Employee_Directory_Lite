@@ -1,0 +1,32 @@
+<div class="employee-directory">
+  <h2>Employee Directory Lite</h2>
+  <div class="add-form">
+    <input [(ngModel)]="newEmployee.name" placeholder="Name" />
+    <input [(ngModel)]="newEmployee.email" placeholder="Email" />
+    <input [(ngModel)]="newEmployee.position" placeholder="Position" />
+    <button (click)="addEmployee()">Add Employee</button>
+  </div>
+  <div class="search-bar">
+    <input [(ngModel)]="searchTerm" placeholder="Search employees..." />
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Position</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let emp of filteredEmployees">
+        <td>{{ emp.name }}</td>
+        <td>{{ emp.email }}</td>
+        <td>{{ emp.position }}</td>
+        <td>
+          <button (click)="deleteEmployee(emp.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
